@@ -1,0 +1,291 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Inter var";
+  src: url("/fonts/Inter-VariableFont_slnt\,wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat var";
+  src: url("/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+
+html,
+body,
+#root {
+  @apply min-h-screen;
+  @apply h-screen;
+}
+
+body[data-scroll-locked] #header {
+  margin-right: var(--removed-body-scroll-bar-size);
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    /* custom containers colors */
+    --container-dark: 0 0% 90%;
+    --container-light: 0 0% 86%;
+    --container-light-1: 0 0% 87%;
+    --container-light-2: 0 0% 78%;
+    --container-same-bg: 0 0% 88%;
+    --container-brand-dark: 18 11% 17%;
+    --container-success: 174 30% 14%;
+    --container-notice-dark: 39 41% 15%;
+    --container-warning-dark: 0 24% 17%;
+    --sidebar-bg: #e0e0e0;
+    --container-brand: 25, 66%, 60%, 1;
+    --container-brand-darker: 25, 70%, 62%, 0.05;
+    --container-markup: 0, 0%, 100%, 0.02;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* borders */
+    --border: rgba(204, 199, 196, 0.1);
+    --border-primary: 0, 0%, 14%, 1;
+    --input: 240 5.9% 90%;
+    --dropdown-values-border: 23, 7%, 78%, 0.02;
+    --ring: 240 10% 3.9%;
+
+    --radius: 0.5rem;
+
+    /* custom colors from metacarbon ui kit */
+    --text-title: 25 7% 28%;
+    --text-disabled: 0 0% 27%;
+    --text-01: 0 0% 60%;
+    --text-02: 0 0% 49%;
+    --text-03: 0 0% 32%;
+    --text-05: 0, 0%, 20%, 1;
+    --text-05-07: 0, 0%, 94%, 0.7;
+    --text-summary: 30 9% 20%;
+    --text-primary-inverted: 0 0% 9%;
+    --text-warning: 0 52% 48%;
+    --text-brand: 25 66% 60%;
+    --text-notice: 39 62% 57%;
+    --text-success: 177 32% 48%;
+    --text-paragraph: 0, 0%, 20%, 1;
+    --text-subtitle: 23, 7%, 50%, 1;
+    --text-subtitle-bright: 23, 7%, 78%, 1;
+    --text-faq-answer: 23, 7%, 22%, 0.8;
+
+    /* icons */
+    --icon-brand: 25 66% 60%;
+    --icon-dark-2: 0 0% 27%;
+    --icon-warning: 0 52% 48%;
+    --icon-light-2: 0 0% 71%;
+    --icon-notice: 39 62% 57%;
+    --icon-dark: 0, 0%, 9%, 1;
+
+    /* custom colors from metacarbon ui kit */
+
+    /* btn primary */
+    --btn-primary: 25 66% 60%;
+    --btn-primary-hover: 25 71% 69%;
+    --btn-primary-pressed: 25 69% 77%;
+    --btn-primary-disabled: 0 0% 14%;
+    --btn-primary-foreground: 210 40% 98%;
+
+    /* btn secondary */
+    --btn-secondary: 17 9% 15%;
+    --btn-secondary-hover: 18 11% 17%;
+    --btn-secondary-pressed: 17 9% 15%;
+    --btn-secondary-foreground: var(--btn-primary-foreground);
+
+    --btn-secondary-disabled: 0 0% 14%;
+    --btn-secondary-disabled-foreground: 0 0% 27%;
+
+    /* btn link */
+    --btn-link-foreground: var(--btn-primary);
+    --btn-link-hover-foreground: 25 71% 69%;
+    --btn-link-disabled-foreground: 0 0% 27%;
+  }
+
+  .dark {
+    /* state colors */
+    --background: 0 0% 11%;
+    --foreground: 0 0% 84%;
+
+    /* custom containers colors */
+    --container-dark: 0 0% 9%;
+    --container-light: 0 0% 14%;
+    --container-light-1: 0 0% 13%;
+    --container-light-2: 0 0% 22%;
+    --container-same-bg: 0 0% 12%;
+    --container-brand-dark: 18 11% 17%;
+    --container-success: 174 30% 14%;
+    --container-notice-dark: 39 41% 15%;
+    --container-warning-dark: 0 24% 17%;
+    --sidebar-bg: #1f1f1f;
+
+    --container-brand: 25, 66%, 60%, 1;
+    --container-brand-darker: 25, 70%, 62%, 0.05;
+    --container-markup: 0, 0%, 100%, 0.02;
+
+    --card: 0 0% 11%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* borders */
+    --border: rgba(204, 199, 196, 0.1);
+    --border-primary: 0, 0%, 14%, 1;
+    --input: 0 0% 14%;
+    --dropdown-values-border: 23, 7%, 78%, 0.02;
+    --ring: 240 4.9% 83.9%;
+
+    --radius: 0.5rem;
+
+    /* custom colors from metacarbon ui kit */
+    --text-title: 25 7% 78%;
+    --text-disabled: 0 0% 27%;
+    --text-01: 0 0% 60%;
+    --text-02: 0 0% 49%;
+    --text-03: 0 0% 32%;
+    --text-05: 0, 0%, 94%, 1;
+    --text-05-07: 0, 0%, 94%, 0.7;
+    --text-summary: 30 9% 80%;
+    --text-primary-inverted: 0 0% 9%;
+    --text-warning: 0 52% 48%;
+    --text-brand: 25 66% 60%;
+    --text-notice: 39 62% 57%;
+    --text-success: 177 32% 48%;
+
+    --text-paragraph: 0, 0%, 94%, 1;
+    --text-subtitle: 23, 7%, 78%, 0.4;
+    --text-subtitle-bright: 23, 7%, 78%, 1;
+    --text-faq-answer: 23, 7%, 78%, 0.8;
+
+    /* icons */
+    --icon-brand: 25 66% 60%;
+    --icon-dark: 0, 0%, 9%, 1;
+    --icon-dark-2: 0 0% 27%;
+    --icon-warning: 0 52% 48%;
+    --icon-light-2: 0 0% 71%;
+    --icon-notice: 39 62% 57%;
+
+    /* btn primary */
+    --btn-primary: 25 66% 60%;
+    --btn-primary-hover: 25 71% 69%;
+    --btn-primary-pressed: 25 69% 77%;
+    --btn-primary-disabled: 0 0% 14%;
+    --btn-primary-foreground: 0 0% 9%;
+
+    /* btn secondary */
+    --btn-secondary: 17 9% 15%;
+    --btn-secondary-hover: 18 11% 17%;
+    --btn-secondary-pressed: 17 9% 15%;
+    --btn-secondary-foreground: var(--btn-primary);
+
+    --btn-secondary-disabled: 0 0% 14%;
+    --btn-secondary-disabled-foreground: 0 0% 27%;
+
+    /* btn link */
+    --btn-link-foreground: var(--btn-primary);
+    --btn-link-hover-foreground: 25 71% 69%;
+    --btn-link-disabled-foreground: 0 0% 27%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply box-border bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .min-h-screen {
+    min-height: 100vh; /* Fallback */
+    min-height: 100dvh;
+  }
+  .h-screen {
+    height: 100vh; /* Fallback */
+    height: 100dvh;
+  }
+
+  /* auth sign in related */
+  .auth-bg-image {
+    background-color: hsl(var(--container-dark));
+    background-image: url("/bgs/auth-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+
+  .docs-bg-image {
+    background-color: hsl(var(--container-dark));
+    background-image: url("/bgs/auth-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-y;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  .separator-gradient {
+    background: linear-gradient(90deg, rgba(204, 199, 196, 0.15) 0%, rgba(204, 199, 196, 0) 100%);
+  }
+
+  .shadow-left-right {
+    box-shadow: -4px 0px 32px 0px rgba(22, 22, 22, 1), 4px 0px 32px 0px rgba(22, 22, 22, 1);
+    clip-path: inset(0px -35px 0px -35px);
+  }
+}
+
+@layer components {
+  .input-like-wrapper {
+    @apply px-3 py-2 w-full rounded-lg border bg-container_dark  text-sm font-medium  h-10 transition-colors text-foreground;
+  }
+
+  label > span {
+    @apply block text-[13px] font-medium opacity-40 mb-[9px];
+  }
+
+  input[type="radio"] {
+    cursor: pointer;
+    outline: none;
+  }
+}

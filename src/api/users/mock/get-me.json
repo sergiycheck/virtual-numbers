@@ -1,0 +1,16 @@
+{
+  "id": "84804477-e0dd-4ba4-bf2a-921b99ca1ec9",
+  "createdAt": "2024-06-27T21:41:38.348Z",
+  "updatedAt": "2024-07-15T09:59:48.784Z",
+  "fullName": "Jack6271",
+  "userName": "user 1",
+  "email": "vomefa3730@joeroc.com",
+  "isEmailConfirmed": true,
+  "role": "Primary User",
+  "stripeCustomerId": "cus_QNAPG1GkpfmFXj",
+  "primaryUserId": null,
+  "balance": 52,
+  "slackUserId": null,
+  "discordUserId": null,
+  "googleUserId": null
+}

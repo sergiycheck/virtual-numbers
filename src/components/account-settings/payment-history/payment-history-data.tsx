@@ -1,0 +1,68 @@
+import { v4 as uuidv4 } from "uuid";
+
+export const PAYMENT_HISTORY_TABLE_DATA = [
+  {
+    id: uuidv4(),
+    paymentDate: "24/08/2023",
+    receiptNumber: "6781028210",
+    credits: 5,
+    amount: "-$19.85",
+    increased: true,
+  },
+  {
+    id: uuidv4(),
+    paymentDate: "24/08/2023",
+    receiptNumber: "6781028210",
+    credits: 4,
+    amount: "-$19.85",
+    increased: false,
+  },
+  {
+    id: uuidv4(),
+    paymentDate: "24/08/2023",
+    receiptNumber: "6781028210",
+    credits: 2,
+    amount: "-$19.85",
+    increased: true,
+  },
+  {
+    id: uuidv4(),
+    paymentDate: "24/08/2023",
+    receiptNumber: "6781028210",
+    credits: 1,
+    amount: "-$19.85",
+    increased: false,
+  },
+  {
+    id: uuidv4(),
+    paymentDate: "24/08/2023",
+    receiptNumber: "6781028210",
+    credits: 7,
+    amount: "-$19.85",
+    increased: true,
+  },
+  {
+    id: uuidv4(),
+    paymentDate: "24/08/2023",
+    receiptNumber: "6781028210",
+    credits: 3,
+    amount: "-$19.85",
+    increased: false,
+  },
+  {
+    id: uuidv4(),
+    paymentDate: "24/08/2023",
+    receiptNumber: "6781028210",
+    credits: 5,
+    amount: "-$19.85",
+    increased: false,
+  },
+  {
+    id: uuidv4(),
+    paymentDate: "24/08/2023",
+    receiptNumber: "6781028210",
+    credits: 6,
+    amount: "-$19.85",
+    increased: false,
+  },
+];
