@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import RootLayout from "@/components/templates/root-layout";
 import { useAuthState } from "@/store/slices/authSlice";
 
@@ -25,15 +25,10 @@ import { ApiKeyPage } from "@/pages/account-settings/api-key/api-key.page";
 import ApiDocumentationPage from "@/pages/api-documentation/api-documentation.page";
 import TermsAndPrivacyPage from "@/pages/terms-and-privacy/terms-and-privacy.page";
 import HelpCenterPage from "@/pages/help-center/help-center.page";
-import { LoaderCircle } from "lucide-react";
 import useUserState from "@/store/slices/userSlice";
 import DocsLayout from "../templates/docs-layout";
 
 const Layout = () => {
-  const { isLogged, authLoading } = useAuthState();
-
-  const authLoadedAndAuthenticated = isLogged && !authLoading;
-
   // return authLoadedAndAuthenticated ? (
   //   <RootLayout />
   // ) : authLoading === true ? (
